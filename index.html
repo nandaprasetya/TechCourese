@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCourse</title>
+    <link rel="shortcut icon" href="img/logo techcourse.png" type="image/x-icon">
+    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div class="home d-flex flex-column">
+        <div class="text-home d-flex flex-column justify-content-center ">
+            <p>Technology</p>
+            <h1>Coding IS A Future Work</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat earum quisquam officiis consequatur possimus cumque, vel odio ducimus libero ipsa expedita obcaecati sapiente cum, fugit deserunt voluptate atque veniam modi?</p>
+        </div>
+        <div class="background-home">
+            <img id="background-home1" src="img/background-home-editing.jpg" alt="">
+            <img id="background-home2" class="off-slide" src="img/background-home-coding.jpg" alt="">
+            <img id="background-home3" class="off-slide" src="img/background-home-coding2.jpg" alt="">
+        </div>
+    </div>
+    
+    <div class="landing-hm p-ats ">
+        <div class="container d-flex justify-content-around align-items-center">
+        <div class="text-landing d-flex flex-column justify-content-around">
+            <h1>Tech Course</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero ipsam, consequuntur, incidunt recusandae animi debitis harum quae hic, repudiandae autem laudantium fugit ullam sapiente earum necessitatibus ab? Facilis, ea.</p>
+            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, aperiam error. Maiores repellat, corrupti nostrum quia aut dolores sunt velit!</h3>
+        </div>
+        <div class="line-landing d-flex flex-column align-items-center">
+            <div class="circle-line">
+                <img src="img/logo techcourse.png" alt="">
+            </div>
+            <div class="inner-line"></div>
+        </div>
+        <div class="landing-vid">
+
+            <video src="https://www.1nul8.nl/media/pages/de-meent/3645043ed0-1680701543/1nul8-placeholder-video-1.mp4" muted autoplay loop></video>
+        </div>
+    </div>
+</div>
+<div class="program p-ats d-flex flex-column align-items-end">
+    <div class="outer-program">
+        <div class="header-program-hm">
+            <h1>PROGRAM UNGGULAN</h1>
+        </div>
+        <div class="area-pil-program d-flex">
+            <h2 id="pil-program-1" class="active">01</h2>
+            <h2 id="pil-program-2">02</h2>
+            <h2 id="pil-program-3">03</h2>
+        </div>
+        <div class="area-program-hm d-flex justify-content-around">
+            <div class="area-text-program d-flex flex-column ">
+                <h1>Front-End Developer</h1>
+                <p>Pelajari Front End Developer untuk membuat tampilan visual Website lebih menarik</p>
+                <h6 id="link-program">SELENGKAPNYA <img src="img/up-right-arrow.png" alt=""></h6>
+            </div>
+            <div class="area-img-program d-flex justify-content-center">
+                <img src="img/front-end1.png" class="efek-cursor" alt="" id="img-program1">
+                <img src="img/front-end2.png" class="efek-cursor" alt="" id="img-program2">
+                <img src="img/front-end3.png" class="efek-cursor" alt="" id="img-program3">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="plugin/jquery-3.7.1.js"></script>
+    <script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugin/gsap/gsap.min.js"></script>
+    <script src="plugin/gsap/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        gsap.to(".circle-line",{
+            scrollTrigger: {
+                trigger: ".text-landing",
+                scrub: true,
+                start: "30% 100%"
+            },
+            y: '300%',
+            ease:"power2.out",
+        });
+
+        $(".efek-cursor").mouseenter(function(){
+            $("#cursor").addClass("cursor-active");
+            $("#cursor").css("mix-blend-mode","exclusion");
+        });
+        $(".efek-cursor").mouseleave(function(){
+            $("#cursor").removeClass("cursor-active");
+            $("#cursor").css("mix-blend-mode","normal");
+        });
+    </script>
+</body>
+</html>

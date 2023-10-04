@@ -1,0 +1,298 @@
+@font-face {
+    font-family: poppins;
+    src:
+    url('../font/Poppins/Poppins-Light.ttf'),
+    url('../font/Poppins/Poppins-Bold.ttf'),
+    url('../font/Poppins/Poppins-Regular.ttf'),
+    url('../font/Poppins/Poppins-Medium.ttf'),
+    url('../font/Poppins/Poppins-Thin.ttf')
+    ;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+#cursor{
+    width: 15px;
+    height: 15px;
+    background-color: #071952;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    pointer-events: none;
+    margin: 0px;
+}
+
+.cursor-active{
+    background-color: #fff !important;
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.p-ats{
+    padding: 80px 0px 20px;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.text-home{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    padding: 10%;
+    background-color: rgba(32, 32, 32, 0.441);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.background-home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slide-out{
+    transition: 1.5s;
+    transform: translateX(-100%) scale(0.7);
+}
+
+.slide-in{
+    display: block;
+    transition: 1.5s;
+    transform: translateX(0%) scale(0.7);
+}
+
+.off-slide{
+    opacity: 0;
+    transform: translateX(100%) scale(0.7);
+    transition: 0s;
+}
+
+.zoom-out{
+    transition: 0.5s;
+    transform: scale(0.7);
+}
+
+.zoom-in{
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.background-home img:nth-child(1){
+    z-index: 2;
+}
+.background-home img:nth-child(2){
+    z-index: 1;
+}
+.area-program-hm{
+    width: 100%;
+}
+
+.header-program-hm h1{
+    font-size: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.header-program-hm h1::before{
+    content: '';
+    display: block;
+    background-color: #000;
+    width: 10px;
+    height: 20px;
+    left: -20px;
+    position:absolute;
+    margin-right: 10px;
+}
+
+.area-program-hm{
+    height: 100%;
+}
+
+.area-pil-program h2{
+    cursor: pointer;
+    margin: 0px 30px;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 1px;
+    transition: 0.7s ease;
+}
+
+.area-pil-program h2.active{
+    color: #FFB000;
+    position: relative;
+    transform: scaleX(-1);
+    transition: 0.7s ease;
+}
+
+.area-pil-program h2.active::after{
+    content: '';
+    background-color: #FFB000;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+}
+
+.area-text-program{
+    margin: 5% 0px 0px;
+    width: 35%;
+}
+
+.area-text-program h1{
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.area-text-program h6{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.area-text-program img{
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+.area-text-program p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #050505;
+}
+
+.area-img-program{
+    width: 65%;
+}
+
+.area-img-program img{
+    width: 25%;
+    height: 450px;
+    object-fit: cover;
+    margin: 0px 1px;
+    transition: 0.7s ease;
+}
+
+.area-img-program img:nth-child(1){
+    clip-path: inset(30% 0 10% 0);
+}
+
+.area-img-program img:nth-child(2){
+    clip-path: inset(20% 0 20% 0);
+}
+
+.area-img-program img:nth-child(3){
+    clip-path: inset(10% 0 30% 0);
+}
+
+.area-img-program img.active{
+    clip-path: inset(50% 0 50% 0);
+    transition: 0.7s ease;
+}
+.area-img-program img.active1{
+    clip-path: inset(30% 0 70% 0);
+    transition: 0.7s ease;
+}
+.area-img-program img.active2{
+    clip-path: inset(90% 0 35% 0);
+    transition: 0.7s ease;
+}
+
+.outer-program{
+    width: 90%;
+}
+
+.landing-hm{
+    width: 100%;
+    height: 100%;
+}
+
+.landing-hm .text-landing{
+    width: 40%;
+}
+
+.text-landing h1{
+    margin-bottom: 30px;
+}
+
+.text-landing p{
+    color: #0a0a0a;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.text-landing h3{
+    font-size: 18px;
+    line-height: 1.8;
+    padding-left: 20px;
+    margin: 40px 0px;
+    border-left: 1px solid #000;
+}
+
+.line-landing{
+    width: 20px;
+    height: 200px;
+    position: relative;
+}
+
+.circle-line{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.logo-landing{
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.line-landing .inner-line{
+    width: 1.5px;
+    height: 100%;
+    display: block;
+    background-color: #000;
+}
+
+.landing-vid{
+    width: 40%;
+    height: 100%;
+}
+
+.landing-vid video{
+    width: 100%;
+    height: 100%;
+}
+
+.circle-line img{
+    width: 30px;
+    height: 30px;
+}
+
